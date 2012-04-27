@@ -1,0 +1,26 @@
+Unifont
+=======
+
+Unicode/UTF-8 usage in SDL
+
+This code shows how to use UTF-8 compatible text input and render 
+more than 34,000 characters using the bitmap font found on
+http://czyborra.com/unifont/HEADER.html
+The font renderer is not particularly sophisticated, as it doesn't
+support bidirectional text nor combining characters (diacritics),
+but it supports the double-width characters found in the above font.
+For desktop application use, there are already much better decoders
+and renderers around, but this might just be the simple piece of code
+to i18nize your SDL game font.
+
+Andreas Textor <textor.andreas@googlemail.com>
+2006-09-16
+
+Usage
+-----
+
+Build the program with make. Look at the code in unifont.c.
+Use buildunifont.sh to create a header file from the hex font that
+you can statically include in your code (use the header instead
+of the openfile() call in the code).
+
